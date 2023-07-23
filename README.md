@@ -2,9 +2,9 @@
  ***The page structure should include the following components:***
 
 ****1. Collapsible Sidebar/Drawer: ****
-• The sidebar should contain a list of dummy data (referred to as data1) presented in the form of cards.
-• The sidebar should also feature a search functionality, allowing users to easily locate specific cards.
-• Additionally, an option to add new cards should be provided, facilitated by a modal window.
+• The sidebar should contain a list of dummy data (referred to as data1) presented in the form of cards. ✅
+• The sidebar should also feature a search functionality, allowing users to easily locate specific cards. ✅
+• Additionally, an option to add new cards should be provided, facilitated by a modal window. ✅
 2. Content Area:
 • By default, the content area should remain empty.
 • Once a card within the sidebar is clicked, the content area should dynamically populate with a list of nested dummy data (referred to as data2) specific to the selected card.
@@ -24,7 +24,7 @@ The structure of this page should consist of the following component:
 It is important to note that data persistence is a requirement both across pages and within sessions.
 
 NOTE
-It is not expected from you to implement all the functionalities mentioned above, your willingness and ability to learn is a more significant factor in evaluating your performance. However, a complete and comprehensive project will be highly regarded during the assessment process.
+### It is not expected from you to implement all the functionalities mentione d#### above, your willingness and ability to learn is a more significant factor in evaluating your performance. However, a complete and comprehensive project will be highly regarded during the assessment process.
 
 Quick video introduction to svelte and tailwind:
 Svelte in 100 Seconds - YouTube
