@@ -1,6 +1,7 @@
 <script>
   import SearchBarComponent from "./SearchBarComponent.svelte";
   import AddProductComp from "./AddProductComp.svelte";
+  import HeroSectionPage1 from "./HeroSectionPage1.svelte";
 
   export let isSidebarOpenVeriable;
   import { debounce } from "lodash";
@@ -35,6 +36,14 @@
     sidebarRender = false
   }
 
+  import { push } from "svelte-spa-router"; // Assuming you are using svelte-spa-router for routing
+
+const handleGetId = (ItemID) => {
+  console.log(ItemID, "ID IS priniting...");
+  push(`/${ItemID}`);
+   // Navigates to the HeroSectionPage1 component with the selected ItemID
+};
+
 </script>
 
 <aside
@@ -43,7 +52,7 @@
     : "hidden"}
 >
   <!-- Search bar Goes Here -->
-  <SearchBarComponent filteredProducts={filteredProducts} handleSearch={handleSearch} />
+  <SearchBarComponent handleSearch={handleSearch} />
   {#if showModal}
    <AddProductComp showModal={showModal} sidebarRender={sidebarRender} filteredProducts={filteredProducts} />
    {/if}
@@ -53,7 +62,7 @@
   {#if filteredProducts.length > 0 }
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 p-4">
     {#each filteredProducts as item (item.id)}
-      <div class="border rounded p-2" key={item.id}>
+      <div on:click={() => handleGetId(item.id)} class="border rounded p-2" key={item.id}>
         <img class=" object-cover" src={item.image} alt={item.id} />
         <h3 class="text-white font-semibold text-xl mb-2">
           Name : {item.brand}
